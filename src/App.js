@@ -23,7 +23,7 @@ const App = () => {
 
   useEffect(() => {
     setLoading(true);
-    firebase.database().ref('events').on('value', (snap) => {
+    firebase.database().ref('events').limitToLast(30).on('value', (snap) => {
       setData(Object.values(snap.val()));
       setLoading(false);
     })

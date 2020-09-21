@@ -17,11 +17,13 @@ const App = () => {
 
 
 
+
   useEffect(() => {
     if (!firebase.apps.length) {
       firebase.initializeApp(config);
     }
   }, [config]);
+
 
   useEffect(() => {
     setLoading(true);

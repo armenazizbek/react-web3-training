@@ -15,6 +15,8 @@ const App = () => {
     databaseURL: "https://web3-e03c0.firebaseio.com/",
   };
 
+
+
   useEffect(() => {
     if (!firebase.apps.length) {
       firebase.initializeApp(config);
